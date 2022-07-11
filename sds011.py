@@ -18,7 +18,7 @@ def colored(r, g, b, text):
 
 k = 0 # current bucket
 bs = int(os.getenv("BUCKET_SIZE", "60")) # bucket size for averages
-pp = 10 # print module every
+pp = int(os.getenv("PRINT_TIME", "10")) # print module every
 pm_25_avg = [] # bucket acc
 pm_10_avg = [] # bucket acc
 

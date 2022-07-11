@@ -10,4 +10,4 @@ docker kill ${NAME} &> /dev/null
 docker rm ${NAME} &> /dev/null
 
 touch ${OUTPUT_FN}
-docker run -d --privileged --restart unless-stopped -v ${OUTPUT_FN}:/output/pm_log.csv --name ${NAME} ${TAG}
+docker run -d --privileged -e BUCKET_SIZE=1800 -e PRINT_TIME=1800 --restart unless-stopped -v ${OUTPUT_FN}:/output/pm_log.csv --name ${NAME} ${TAG}
